@@ -1,0 +1,13 @@
+doctype html
+html ng-app=this.package.name ng-strict-di=true
+  head
+    title
+    base href="/"/
+    / inject:css
+    / endinject
+    / inject:js
+    / endinject
+  body
+    main ng-view=""
+    / inject:slm
+    / endinject

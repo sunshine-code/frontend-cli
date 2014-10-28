@@ -1,0 +1,13 @@
+paths:
+  app:           app/
+  app_modules:   app/modules/
+  stylesheets:   assets/stylesheets/
+  images:        assets/images/
+  fonts:         assets/fonts/
+  public:        public/
+  public_assets: public/assets/
+  http_assets:   /assets
+filenames:
+  src_javascript:  app
+  src_stylesheet:  application.scss
+  dest_javascript: application.js
