@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.0.1",
   "description": "Scaffold for frontend app",
-  "main": "./app",
+  "main": "./app/index.coffee",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,14 +18,17 @@
   "browserify": {
     "transform": [
       "coffeeify",
-      "browserify-shim"
+      "browserify-shim",
+      "yamlify"
     ]
   },
   "browser": {
-    "angular": "./node_modules/angular/angular.js"
+    "angular": "./node_modules/angular/angular.js",
+    "restangular": "./node_modules/restangular/dist/restangular.min.js"
   },
   "browserify-shim": {
-    "angular": "angular"
+    "angular": "angular",
+    "restangular": { "depends": ["lodash:_"] }
   },
   "devDependencies": {
     "browserify": "^6.2.0",
@@ -48,11 +51,14 @@
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.0.0",
     "watchify": "^2.1.0",
+    "yamlify": "^0.1.2",
     "yamljs": "^0.2.1"
   },
   "dependencies": {
     "angular": "^1.3.0",
-    "angular-resource": "^1.3.0",
-    "angular-route": "^1.3.0"
-  }
+    "angular-local-storage": "^0.1.5",
+    "angular-route": "^1.3.0",
+    "restangular": "^1.4.0"
+  },
+  "private": true
 }

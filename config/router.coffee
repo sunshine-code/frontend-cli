@@ -1,7 +1,7 @@
-ApplicationRouter = ($routeProvider, $locationProvider) ->
+RouterConfig = ($routeProvider, $locationProvider) ->
   $locationProvider.html5Mode(true)
   $routeProvider.otherwise(redirectTo:'/')
 
-ApplicationRouter.$inject = ["$routeProvider", "$locationProvider"]
+RouterConfig.$inject = ["$routeProvider", "$locationProvider"]
 
-module.exports = ApplicationRouter
+module.exports = RouterConfig

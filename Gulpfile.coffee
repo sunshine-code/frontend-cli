@@ -53,7 +53,7 @@ gulp.task "markup", ->
   javascripts = config.paths.public_assets + "**/*.js"
   stylesheets = config.paths.public_assets + "**/*.css"
   assets      = gulp.src [javascripts, stylesheets], read: false
-  templates   = gulp.src config.paths.app_modules + "**/*.slm"
+  templates   = gulp.src config.paths.app + "**/*.slm"
 
   transform_template = (filepath, file) ->
     id = filepath.replace(/slm$/, "html")
@@ -69,7 +69,7 @@ gulp.task "markup", ->
 
   gulp.src(config.paths.app + "*.slm")
     .pipe inject assets, ignorePath: config.paths.public
-    .pipe inject templates, ignorePath: config.paths.app_modules, transform: transform_template
+    .pipe inject templates, ignorePath: config.paths.app, transform: transform_template
     .pipe slm(locals: { package: pkg, config: config })
     .pipe if gutil.env.dev then gutil.noop() else minify_html(gconfig.minify_html)
     .pipe gulp.dest(config.paths.public)
@@ -89,7 +89,7 @@ gulp.task "webserver", ->
 
 gulp.task "watch", ->
   gulp.watch config.paths.stylesheets + "**/*.scss", ["stylesheets"]
-  gulp.watch config.paths.app + "**/*.html", ["markup"]
+  gulp.watch config.paths.app + "**/*.slm", ["markup"]
   gulp.watch config.paths.images + "**/*", ["images"]
   gulp.watch config.paths.fonts + "**/*", ["fonts"]
 

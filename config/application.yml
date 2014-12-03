@@ -1,6 +1,5 @@
 paths:
   app:           app/
-  app_modules:   app/modules/
   stylesheets:   assets/stylesheets/
   images:        assets/images/
   fonts:         assets/fonts/
@@ -11,3 +10,5 @@ filenames:
   src_javascript:  app
   src_stylesheet:  application.scss
   dest_javascript: application.js
+api:
+  base: http://localhost:3000
