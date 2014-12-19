@@ -3,6 +3,10 @@ autoprefixer:
 browserify:
   extensions: .coffee
   debug: true
+gzip:
+  threshold: 1
+  gzipOptions:
+    level: 9
 imagemin:
   progressive: true
   svgoPlugins: [removeViewBox: false]
@@ -13,3 +17,7 @@ sass:
   sourcemap: none
   compass: true
   bundleExec: true
+webserver:
+  host: 0.0.0.0
+  fallback: index.html
+  livereload: true

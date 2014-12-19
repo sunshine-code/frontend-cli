@@ -16,6 +16,7 @@ inject       = require "gulp-inject"
 minify_html  = require "gulp-minify-html"
 imagemin     = require "gulp-imagemin"
 pngquant     = require "imagemin-pngquant"
+gzip         = require "gulp-gzip"
 webserver    = require "gulp-webserver"
 
 pkg     = require "./package"
@@ -32,6 +33,8 @@ gulp.task "javascripts", ->
       .pipe buffer()
       .pipe if gutil.env.dev then gutil.noop() else uglify(gconfig.uglify)
       .pipe gulp.dest(config.paths.public_assets)
+      .pipe if gutil.env.dev then gutil.noop() else gzip(gconfig.gzip)
+      .pipe if gutil.env.dev then gutil.noop() else gulp.dest(config.paths.public_assets)
       .on "end", -> gutil.log "Succesfully bundled"
 
   if gutil.env.dev
@@ -48,6 +51,8 @@ gulp.task "stylesheets", ->
     .pipe if gutil.env.dev then csscomb(gconfig.csscomb) else gutil.noop()
     .pipe if gutil.env.dev then gutil.noop() else csso(gconfig.csso_disable_struct_min)
     .pipe gulp.dest(config.paths.public_assets)
+    .pipe if gutil.env.dev then gutil.noop() else gzip(gconfig.gzip)
+    .pipe if gutil.env.dev then gutil.noop() else gulp.dest(config.paths.public_assets)
 
 gulp.task "markup", ->
   javascripts = config.paths.public_assets + "**/*.js"
@@ -73,6 +78,8 @@ gulp.task "markup", ->
     .pipe slm(locals: { package: pkg, config: config })
     .pipe if gutil.env.dev then gutil.noop() else minify_html(gconfig.minify_html)
     .pipe gulp.dest(config.paths.public)
+    .pipe if gutil.env.dev then gutil.noop() else gzip(gconfig.gzip)
+    .pipe if gutil.env.dev then gutil.noop() else gulp.dest(config.paths.public)
 
 gulp.task "images", ->
   gulp.src(config.paths.images + "**/*")
@@ -85,7 +92,7 @@ gulp.task "fonts", ->
 
 gulp.task "webserver", ->
   gulp.src("./public")
-    .pipe webserver fallback: "index.html", livereload: true
+    .pipe webserver gconfig.webserver
 
 gulp.task "watch", ->
   gulp.watch config.paths.stylesheets + "**/*.scss", ["stylesheets"]

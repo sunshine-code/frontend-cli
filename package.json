@@ -28,7 +28,11 @@
   },
   "browserify-shim": {
     "angular": "angular",
-    "restangular": { "depends": ["lodash:_"] }
+    "restangular": {
+      "depends": [
+        "lodash:_"
+      ]
+    }
   },
   "devDependencies": {
     "browserify": "^6.2.0",
@@ -39,6 +43,7 @@
     "gulp-autoprefixer": "^1.0.1",
     "gulp-csscomb": "^3.0.3",
     "gulp-csso": "^0.2.9",
+    "gulp-gzip": "0.0.8",
     "gulp-imagemin": "^1.2.1",
     "gulp-inject": "mkyurchev/gulp-inject#fcd2765aba",
     "gulp-minify-html": "^0.1.6",
