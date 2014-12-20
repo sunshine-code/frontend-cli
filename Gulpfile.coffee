@@ -49,7 +49,7 @@ gulp.task "stylesheets", ->
     .pipe if gutil.env.dev then gutil.noop() else csso(gconfig.csso_disable_struct_min)
     .pipe gulp.dest(config.paths.public_assets)
 
-gulp.task "markup", ->
+gulp.task "markup", ["javascripts", "stylesheets"], ->
   javascripts = config.paths.public_assets + "**/*.js"
   stylesheets = config.paths.public_assets + "**/*.css"
   assets      = gulp.src [javascripts, stylesheets], read: false
