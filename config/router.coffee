@@ -1,6 +1,6 @@
 RouterConfig = ($routeProvider, $locationProvider) ->
   $locationProvider.html5Mode(true)
-  $routeProvider.otherwise(redirectTo:'/')
+  $routeProvider.otherwise(redirectTo:"/")
 
 RouterConfig.$inject = ["$routeProvider", "$locationProvider"]
 

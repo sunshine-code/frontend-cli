@@ -1,9 +1,9 @@
 angular = require "angular"
 
-class SampleController
+class MainController
   @$inject = ["Sample"]
 
   constructor: (Sample) ->
     angular.extend @, Sample
 
-module.exports = SampleController
+module.exports = MainController

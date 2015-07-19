@@ -3,13 +3,25 @@ autoprefixer:
 browserify:
   extensions: .coffee
   debug: true
+watchify:
+  delay: 1500
+  poll: true
+gzip:
+  threshold: 1
+  gzipOptions:
+    level: 9
 imagemin:
   progressive: true
   svgoPlugins: [removeViewBox: false]
 minify_html:
   conditionals: true
+  empty: true
   quotes: true
 sass:
-  sourcemap: none
   compass: true
   bundleExec: true
+webserver:
+  host: 0.0.0.0
+  port: 9000
+  fallback: index.html
+  livereload: true
