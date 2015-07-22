@@ -4,7 +4,7 @@
   "description": "Scaffold for frontend app",
   "main": "./app/index.coffee",
   "scripts": {
-    "test": "./node_modules/karma/bin/karma start --single-run",
+    "test": "./node_modules/karma/bin/karma start config/karma.conf.coffee --single-run",
     "start": "./node_modules/gulp/bin/gulp.js --dev"
   },
   "repository": {
@@ -40,9 +40,9 @@
     "coffee-script": "^1.8.0",
     "coffeeify": "^1.1.0",
     "gulp": "^3.8.9",
-    "gulp-autoprefixer": "^1.0.1",
+    "gulp-autoprefixer": "^2.3.1",
     "gulp-csscomb": "^3.0.3",
-    "gulp-csso": "^0.2.9",
+    "gulp-csso": "^1.0.0",
     "gulp-gzip": "0.0.8",
     "gulp-imagemin": "^1.2.1",
     "gulp-inject": "mkyurchev/gulp-inject#fcd2765aba",

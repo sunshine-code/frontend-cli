@@ -1,15 +1,11 @@
 gulp        = require "gulp"
 gutil       = require "gulp-util"
-YAML        = require "yamljs"
-extend      = require("util")._extend
 slm         = require "gulp-slm"
 inject      = require "gulp-inject"
 minify_html = require "gulp-minify-html"
 gzip        = require "gulp-gzip"
-
-pkg    = require "../package"
-config = extend YAML.load("config/application.yml"),
-                YAML.load("config/build.yml")
+config      = require "../helpers/config"
+pkg         = require "../../package"
 
 transform_template = (filepath, file) ->
   id = filepath.replace(/slm$/, "html")

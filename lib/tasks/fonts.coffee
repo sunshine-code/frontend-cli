@@ -1,7 +1,5 @@
-gulp = require "gulp"
-YAML = require "yamljs"
-
-config = YAML.load "config/application.yml"
+gulp   = require "gulp"
+config = require "../helpers/config"
 
 gulp.task "fonts", ->
   gulp.src(config.paths.fonts + "**/*")

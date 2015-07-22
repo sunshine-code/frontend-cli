@@ -1,17 +1,15 @@
 gulp         = require "gulp"
 gutil        = require "gulp-util"
-YAML         = require "yamljs"
 extend       = require("util")._extend
 sass         = require "gulp-ruby-sass"
 autoprefixer = require "gulp-autoprefixer"
 csscomb      = require "gulp-csscomb"
 csso         = require "gulp-csso"
 gzip         = require "gulp-gzip"
-
-config = extend YAML.load("config/application.yml"),
-                YAML.load("config/build.yml")
+config       = require "../helpers/config"
 
 gulp.task "stylesheets", ->
+  extend(config.sass, sourcemap: "none") unless gutil.env.dev
   gulp.src(config.paths.stylesheets + config.filenames.src_stylesheet)
     .pipe sass(config.sass)
     .on "error", (err) -> gutil.log err.message

@@ -1,11 +1,8 @@
 gulp         = require "gulp"
-YAML         = require "yamljs"
 extend       = require("util")._extend
 imagemin     = require "gulp-imagemin"
 pngquant     = require "imagemin-pngquant"
-
-config = extend YAML.load("config/application.yml"),
-                YAML.load("config/build.yml")
+config       = require "../helpers/config"
 
 gulp.task "images", ->
   gulp.src(config.paths.images + "**/*")
