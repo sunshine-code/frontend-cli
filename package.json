@@ -4,8 +4,11 @@
   "description": "Scaffold for frontend app",
   "main": "./app/index.coffee",
   "scripts": {
-    "test": "./node_modules/karma/bin/karma start config/karma.conf.coffee --single-run",
-    "start": "./node_modules/gulp/bin/gulp.js --dev"
+    "test": "./node_modules/karma/bin/karma start config/karma.conf.coffee",
+    "test:watch": "npm run test -- --no-single-run",
+    "build": "./node_modules/gulp/bin/gulp.js",
+    "start": "npm run build -- webserver",
+    "start:dev": "npm run build -- --dev"
   },
   "repository": {
     "type": "git",

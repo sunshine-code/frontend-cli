@@ -9,6 +9,6 @@ gulp.task "test", (done) ->
     configFile: "#{project_root}/config/karma.conf.coffee",
     colors: false
 
-  options.singleRun = true unless gutil.env.dev
+  options.singleRun = false if gutil.env.dev
 
   karma.start(options, -> done())
