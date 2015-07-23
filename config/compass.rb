@@ -1,6 +1,6 @@
 require "yaml"
 
-config = YAML::load_file("config/application.yml")
+config = YAML::load_file(File.expand_path("../application.yml", __FILE__))
 
 sass_dir   = config["paths"]["stylesheets"]
 images_dir = config["paths"]["images"]
