@@ -11,4 +11,4 @@ gulp.task "test", (done) ->
 
   options.singleRun = true unless gutil.env.dev
 
-  karma.start(options, done)
+  karma.start(options, -> done())
