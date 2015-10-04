@@ -1,8 +1,6 @@
 gulp      = require "gulp"
-YAML      = require "yamljs"
 webserver = require "gulp-webserver"
-
-config = YAML.load "config/build.yml"
+config    = require "../helpers/config"
 
 gulp.task "webserver", ->
   gulp.src("./public")

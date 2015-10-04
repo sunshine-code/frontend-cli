@@ -1,6 +1,5 @@
 gulp       = require "gulp"
 gutil      = require "gulp-util"
-YAML       = require "yamljs"
 source     = require "vinyl-source-stream"
 buffer     = require "vinyl-buffer"
 extend     = require("util")._extend
@@ -8,9 +7,7 @@ browserify = require "browserify"
 watchify   = require "watchify"
 uglify     = require "gulp-uglify"
 gzip       = require "gulp-gzip"
-
-config = extend YAML.load("config/application.yml"),
-                YAML.load("config/build.yml")
+config     = require "../helpers/config"
 
 gulp.task "javascripts", ->
   options = extend(watchify.args, config.browserify)

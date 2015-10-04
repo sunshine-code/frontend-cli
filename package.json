@@ -1,11 +1,14 @@
 {
   "name": "frontend",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "description": "Scaffold for frontend app",
   "main": "./app/index.coffee",
   "scripts": {
-    "test": "./node_modules/karma/bin/karma start --single-run",
-    "start": "./node_modules/gulp/bin/gulp.js --dev"
+    "test": "./node_modules/karma/bin/karma start config/karma.conf.coffee",
+    "test:watch": "npm run test -- --no-single-run",
+    "build": "./node_modules/gulp/bin/gulp.js",
+    "start": "npm run build -- webserver",
+    "start:dev": "npm run build -- --dev"
   },
   "repository": {
     "type": "git",
@@ -40,15 +43,16 @@
     "coffee-script": "^1.8.0",
     "coffeeify": "^1.1.0",
     "gulp": "^3.8.9",
-    "gulp-autoprefixer": "^1.0.1",
-    "gulp-csscomb": "^3.0.3",
-    "gulp-csso": "^0.2.9",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-csscomb": "^3.0.6",
+    "gulp-csso": "^1.0.0",
     "gulp-gzip": "0.0.8",
     "gulp-imagemin": "^1.2.1",
     "gulp-inject": "mkyurchev/gulp-inject#fcd2765aba",
     "gulp-minify-html": "^0.1.6",
-    "gulp-ruby-sass": "sindresorhus/gulp-ruby-sass#2572c99f72",
+    "gulp-ruby-sass": "^1.0.5",
     "gulp-slm": "0.0.4",
+    "gulp-sourcemaps": "^1.5.2",
     "gulp-uglify": "^1.0.1",
     "gulp-util": "^3.0.1",
     "gulp-webserver": "^0.8.4",
