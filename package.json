@@ -13,16 +13,26 @@
   "scripts": {
     "start": ""
   },
-  "repository": "github:mkyurchev/frontend",
+  "repository": "github:kiurchv/frontend",
   "author": "Miroslav Kyurchev",
   "bugs": {
-    "url": "https://github.com/mkyurchev/frontend/issues"
+    "url": "https://github.com/kiurchv/frontend/issues"
   },
-  "homepage": "https://github.com/mkyurchev/frontend",
+  "homepage": "https://github.com/kiurchv/frontend",
   "dependencies": {
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-system-import-commonjs": "^1.0.2",
     "babel-preset-es2015": "^6.9.0",
+    "babel-preset-es2015-webpack": "^6.4.1",
     "babel-register": "^6.9.0",
-    "webpack": "^2.1.0-beta.8",
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "github:AppShipIt/extract-text-webpack-plugin#196-webpack2-query-object",
+    "file-loader": "^0.8.5",
+    "html-webpack-plugin": "^2.19.0",
+    "node-sass": "^3.7.0",
+    "sass-loader": "^3.2.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^2.1.0-beta.13",
     "yargs": "github:yargs/yargs#365fb9a"
   },
   "devDependencies": {},

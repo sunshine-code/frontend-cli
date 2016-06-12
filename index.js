@@ -2,6 +2,7 @@
 
 const BABEL_OPTIONS = {
   presets: ["es2015"],
+  plugins: ["transform-system-import-commonjs"],
   ignore: false,
   only: /frontend\/lib/
 };
