@@ -1,10 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <%# Essentials%>
     <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <%# Control the behavior of search engine crawling and indexing%>
+    <meta name="robots" content="index,follow,noodp">
+
+    <%# Allows control over how referrer information is passed%>
+    <meta name="referrer" content="never">
+
+    <%# Links to the author of the document%>
+    <link rel="author" href="humans.txt">
   </head>
   <body>
+    <%# Inlines the manifest script with runtime and chunks metadata included%>
     <%= htmlWebpackPlugin.files.webpackManifest %>
   </body>
 </html>
