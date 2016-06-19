@@ -24,7 +24,6 @@
     "babel-plugin-transform-system-import-commonjs": "^1.0.2",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-es2015-webpack": "^6.4.1",
-    "babel-preset-react": "^6.5.0",
     "babel-register": "^6.9.0",
     "clean-webpack-plugin": "^0.1.9",
     "css-loader": "^0.23.1",
@@ -37,6 +36,7 @@
     "sass-loader": "^3.2.0",
     "style-loader": "^0.13.1",
     "webpack": "^2.1.0-beta.13",
+    "webpack-dev-server": "^2.1.0-beta.0",
     "webpack-visualizer-plugin": "^0.1.5",
     "yargs": "github:yargs/yargs#365fb9a"
   },
