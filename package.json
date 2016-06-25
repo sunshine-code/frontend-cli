@@ -14,7 +14,7 @@
     "start": ""
   },
   "repository": "github:kiurchv/frontend",
-  "author": "Miroslav Kyurchev",
+  "author": "Myroslav Kiurchev",
   "bugs": {
     "url": "https://github.com/kiurchv/frontend/issues"
   },
@@ -36,6 +36,7 @@
     "imagemin-webpack-plugin": "^1.0.7",
     "inline-manifest-webpack-plugin": "^3.0.1",
     "node-sass": "^3.7.0",
+    "offline-plugin": "^3.4.0",
     "postcss-cssnext": "^2.6.0",
     "postcss-focus": "^1.0.0",
     "postcss-loader": "^0.9.1",
