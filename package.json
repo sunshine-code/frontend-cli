@@ -35,6 +35,7 @@
     "html-webpack-plugin": "^2.19.0",
     "imagemin-webpack-plugin": "^1.0.7",
     "inline-manifest-webpack-plugin": "^3.0.1",
+    "interpret": "^1.0.1",
     "node-sass": "^3.7.0",
     "offline-plugin": "^3.4.0",
     "postcss-cssnext": "^2.6.0",
@@ -49,10 +50,14 @@
     "stylelint-config-standard": "^9.0.0",
     "webpack": "^2.1.0-beta.14",
     "webpack-dev-server": "^2.1.0-beta.0",
+    "webpack-merge": "^0.14.0",
     "webpack-visualizer-plugin": "^0.1.5",
-    "yargs": "github:yargs/yargs#365fb9a"
+    "yargs": "github:yargs/yargs#20d4b8a"
   },
   "devDependencies": {},
+  "engines": {
+    "node": ">=6.0.0"
+  },
   "license": "MIT",
   "private": true
 }
