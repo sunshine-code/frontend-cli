@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 
 const BABEL_OPTIONS = {
-  presets: ["es2015"],
-  plugins: ["transform-system-import-commonjs"],
+  plugins: [
+    "transform-es2015-modules-commonjs",
+    "transform-system-import-commonjs"
+  ],
   ignore: false,
   only: /frontend\/lib/
 };
