@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "frontend-cli",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,12 +13,12 @@
   "scripts": {
     "start": ""
   },
-  "repository": "github:kiurchv/frontend",
+  "repository": "github:kiurchv/frontend-cli",
   "author": "Myroslav Kiurchev",
   "bugs": {
-    "url": "https://github.com/kiurchv/frontend/issues"
+    "url": "https://github.com/kiurchv/frontend-cli/issues"
   },
-  "homepage": "https://github.com/kiurchv/frontend",
+  "homepage": "https://github.com/kiurchv/frontend-cli",
   "dependencies": {
     "autoprefixer": "^6.3.6",
     "babel-loader": "^6.2.4",

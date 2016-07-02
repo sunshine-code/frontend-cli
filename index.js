@@ -6,7 +6,7 @@ const BABEL_OPTIONS = {
     "transform-system-import-commonjs"
   ],
   ignore: false,
-  only: /frontend\/lib/
+  only: /frontend-cli\/lib/
 };
 
 require("babel-register")(BABEL_OPTIONS);

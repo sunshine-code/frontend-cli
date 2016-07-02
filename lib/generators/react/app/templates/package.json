@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "babel-preset-react": "^6.5.0",
-    "frontend": "github:kiurchv/frontend#rewrite",
+    "frontend-cli": "github:kiurchv/frontend-cli#rewrite",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
     "react-hot-loader": "^3.0.0-beta.2",
