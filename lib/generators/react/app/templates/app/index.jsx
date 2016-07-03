@@ -1,31 +1,26 @@
 import React from "react";
 import { render } from "react-dom";
 import { AppContainer } from "react-hot-loader";
-import { Provider } from "react-redux";
 import { install } from "offline-plugin/runtime";
 
 import Store from "./Store";
-import Routes from "./Routes";
+import App from "./App";
 
 const ROOT_ELEMENT = document.getElementById("root");
 const STORE = new Store();
 
 render(
   <AppContainer>
-    <Provider store={STORE}>
-      {Routes}
-    </Provider>,
+    {App(STORE)}
   </AppContainer>,
   ROOT_ELEMENT
 );
 
 if (module.hot) {
-  module.hot.accept("./Routes", () => {
+  module.hot.accept("./App", () => {
     render(
       <AppContainer>
-        <Provider store={STORE}>
-          {Routes}
-        </Provider>,
+        {App(STORE)}
       </AppContainer>,
       ROOT_ELEMENT
     );

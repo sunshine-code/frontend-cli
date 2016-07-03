@@ -1,11 +1,14 @@
 import React, { Component } from "react";
-
-import style from "./style.scss";
-
+<% if (styles) { %>
+import style from "./style.<%= stylesExt %>";
+<% } %>
 export default class <%= name %> extends Component {
   render() {
     return (
-      <div>Hello from <%= name %>!</div>
+      <div><% if (content) { %>
+        <%= content %><% } %><% if (children) { %>
+        {this.props.children}<% } %>
+      </div>
     );
   }
 }

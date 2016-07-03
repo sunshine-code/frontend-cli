@@ -58,7 +58,10 @@
     "webpack-visualizer-plugin": "^0.1.5",
     "yargs": "github:yargs/yargs#20d4b8a"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "babel-preset-react": "^6.11.1",
+    "react-hot-loader": "^3.0.0-beta.2"
+  },
   "engines": {
     "node": ">=6.0.0"
   },
