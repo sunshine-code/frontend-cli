@@ -4,14 +4,13 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "frontend": "./index.js",
     "fe": "./index.js"
   },
   "directories": {
     "lib": "./lib"
   },
   "scripts": {
-    "start": ""
+    "postinstall": "./init.js"
   },
   "repository": "github:kiurchv/frontend-cli",
   "author": "Myroslav Kiurchev",
@@ -48,7 +47,7 @@
     "postcss-scss": "^0.1.8",
     "progress-bar-webpack-plugin": "^1.8.0",
     "readline-sync": "^1.4.4",
-    "sass-loader": "^3.2.2",
+    "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
     "stylelint": "^6.7.0",
     "stylelint-config-standard": "^9.0.0",
