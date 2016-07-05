@@ -1,79 +1,68 @@
 {
-  "name": "frontend",
-  "version": "0.2.0",
-  "description": "Scaffold for frontend app",
-  "main": "./app/index.coffee",
+  "name": "frontend-cli",
+  "version": "1.0.0-beta.1",
+  "description": "Toolkit for rapid development of React and Angular 2 apps",
+  "main": "index.js",
+  "bin": {
+    "fe": "./index.js"
+  },
+  "directories": {
+    "lib": "./lib"
+  },
   "scripts": {
-    "test": "./node_modules/karma/bin/karma start config/karma.conf.coffee",
-    "test:watch": "npm run test -- --no-single-run",
-    "build": "./node_modules/gulp/bin/gulp.js",
-    "start": "npm run build -- webserver",
-    "start:dev": "npm run build -- --dev"
+    "postinstall": "node ./init.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/mkyurchev/frontend.git"
-  },
-  "author": "Miroslav Kyurchev",
+  "repository": "github:kiurchv/frontend-cli",
+  "author": "Myroslav Kiurchev",
   "bugs": {
-    "url": "https://github.com/mkyurchev/frontend/issues"
+    "url": "https://github.com/kiurchv/frontend-cli/issues"
   },
-  "homepage": "https://github.com/mkyurchev/frontend",
-  "browserify": {
-    "transform": [
-      "coffeeify",
-      "browserify-shim",
-      "yamlify"
-    ]
-  },
-  "browser": {
-    "restangular": "./node_modules/restangular/dist/restangular.min.js"
-  },
-  "browserify-shim": {
-    "restangular": {
-      "depends": [
-        "lodash:_"
-      ]
-    }
+  "homepage": "https://github.com/kiurchv/frontend-cli",
+  "dependencies": {
+    "autoprefixer": "^6.3.6",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.10.3",
+    "babel-plugin-transform-system-import-commonjs": "^1.0.2",
+    "babel-preset-es2015-webpack": "^6.4.1",
+    "babel-register": "^6.9.0",
+    "chalk": "^1.1.3",
+    "clean-webpack-plugin": "^0.1.9",
+    "css-loader": "^0.23.1",
+    "diff": "^2.2.3",
+    "extract-text-webpack-plugin": "github:kiurchv/extract-text-webpack-plugin#196-webpack2-query-object",
+    "favicons-webpack-plugin": "github:jantimon/favicons-webpack-plugin#03315ba",
+    "file-loader": "^0.8.5",
+    "html-webpack-plugin": "^2.19.0",
+    "imagemin-webpack-plugin": "^1.0.7",
+    "inline-manifest-webpack-plugin": "^3.0.1",
+    "interpret": "^1.0.1",
+    "lodash": "^4.13.1",
+    "mkdirp": "^0.5.1",
+    "node-sass": "^3.7.0",
+    "offline-plugin": "^3.4.0",
+    "postcss-cssnext": "^2.6.0",
+    "postcss-focus": "^1.0.0",
+    "postcss-loader": "^0.9.1",
+    "postcss-reporter": "^1.3.3",
+    "postcss-scss": "^0.1.8",
+    "progress-bar-webpack-plugin": "^1.8.0",
+    "readline-sync": "^1.4.4",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1",
+    "stylelint": "^6.7.0",
+    "stylelint-config-standard": "^9.0.0",
+    "webpack": "^2.1.0-beta.15",
+    "webpack-dev-server": "^2.1.0-beta.0",
+    "webpack-merge": "^0.14.0",
+    "webpack-visualizer-plugin": "^0.1.5",
+    "yargs": "github:yargs/yargs#20d4b8a"
   },
   "devDependencies": {
-    "angular-mocks": "^1.4.0",
-    "browserify": "^10.2.0",
-    "browserify-shim": "^3.8.6",
-    "coffee-script": "^1.8.0",
-    "coffeeify": "^1.1.0",
-    "gulp": "^3.8.9",
-    "gulp-autoprefixer": "^2.3.1",
-    "gulp-csscomb": "^3.0.6",
-    "gulp-csso": "^1.0.0",
-    "gulp-gzip": "0.0.8",
-    "gulp-imagemin": "^1.2.1",
-    "gulp-inject": "mkyurchev/gulp-inject#fcd2765aba",
-    "gulp-minify-html": "^0.1.6",
-    "gulp-ruby-sass": "^1.0.5",
-    "gulp-slm": "0.0.4",
-    "gulp-sourcemaps": "^1.5.2",
-    "gulp-uglify": "^1.0.1",
-    "gulp-util": "^3.0.1",
-    "gulp-webserver": "^0.8.4",
-    "imagemin-pngquant": "^4.0.0",
-    "jasmine-core": "^2.3.2",
-    "karma": "^0.12.31",
-    "karma-browserify": "^4.2.1",
-    "karma-jasmine": "^0.3.5",
-    "karma-phantomjs-launcher": "^0.1.4",
-    "require-dir": "^0.3.0",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.0.0",
-    "watchify": "^3.2.1",
-    "yamlify": "^0.1.2",
-    "yamljs": "^0.2.1"
+    "babel-preset-react": "^6.11.1",
+    "react-hot-loader": "^3.0.0-beta.2"
   },
-  "dependencies": {
-    "angular": "^1.4.0",
-    "angular-local-storage": "^0.2.1",
-    "angular-route": "^1.4.0",
-    "restangular": "^1.5.1"
+  "engines": {
+    "node": ">=6.0.0"
   },
-  "private": true
+  "license": "MIT"
 }
