@@ -1,7 +1,7 @@
 {
   "name": "frontend-cli",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.0-beta.1",
+  "description": "Toolkit for rapid development of React and Angular 2 apps",
   "main": "index.js",
   "bin": {
     "fe": "./index.js"
@@ -10,7 +10,7 @@
     "lib": "./lib"
   },
   "scripts": {
-    "postinstall": "./init.js"
+    "postinstall": "node ./init.js"
   },
   "repository": "github:kiurchv/frontend-cli",
   "author": "Myroslav Kiurchev",
@@ -64,6 +64,5 @@
   "engines": {
     "node": ">=6.0.0"
   },
-  "license": "MIT",
-  "private": true
+  "license": "MIT"
 }

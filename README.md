@@ -1,7 +1,7 @@
 frontend-cli
 ============
 
-Command-line utility for rapid automated development of React and Angular 2 applications.
+Toolkit for rapid development of React and Angular 2 apps.
 
 Setup
 -----
@@ -42,14 +42,14 @@ Remove earlier generated code:
 bin/fe destroy <scaffold> <name>
 ```
 
-##### Available scaffolds
+#### Available scaffolds
 
-###### Common
+##### Common
 
 * `html` — index.html page template
 * `stylelint` — stylelint config file
 
-###### React
+##### React
 
 * `component`
 * `route`

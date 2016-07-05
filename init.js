@@ -1,13 +1,12 @@
-#!/usr/bin/env node
-
 require("./bootstrap");
 
 const fs = require("fs");
 const path = require("path");
 
-// Return to external directory
+// Go to the external directory
 process.chdir(path.resolve(__dirname, "..", ".."));
 
+// Dont run on earlier initialized apps
 if (fs.readdirSync(process.cwd()).includes("app")) process.exit(0);
 
 const utils = require("./lib/utils");
