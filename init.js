@@ -2,17 +2,16 @@
 
 require("./bootstrap");
 
-const WORKING_DIR = process.cwd();
+const fs = require("fs");
+const path = require("path");
 
-let fs = require("fs");
+// Return to external directory
+process.chdir(path.resolve(__dirname, "..", ".."));
 
-if (
-  /frontend-cli/.test(WORKING_DIR) ||
-  fs.readdirSync(WORKING_DIR).includes("app")
-) process.exit(0);
+if (fs.readdirSync(process.cwd()).includes("app")) process.exit(0);
 
-let utils = require("./lib/utils");
-let config = utils.loadRC();
-let { default: AppGenerator } = require(`./lib/generators/${config.framework}/app`);
+const utils = require("./lib/utils");
+const config = utils.loadRC();
+const { default: AppGenerator } = require(`./lib/generators/${config.framework}/app`);
 
 new AppGenerator(config).generate();
