@@ -6,8 +6,11 @@ const path = require("path");
 // Go to the external directory
 process.chdir(path.resolve(__dirname, "..", ".."));
 
-// Dont run on earlier initialized apps
-if (fs.readdirSync(process.cwd()).includes("package.json")) process.exit(0);
+// Dont run if package located outside node_modules folder and on earlier initialized apps
+if (
+  path.basename(path.resolve(__dirname, "..")) != "node_modules" ||
+  fs.readdirSync(process.cwd()).includes("package.json")
+) process.exit(0);
 
 const utils = require("./lib/utils");
 const config = utils.loadRC();
