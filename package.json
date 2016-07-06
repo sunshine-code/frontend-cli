@@ -1,6 +1,6 @@
 {
   "name": "frontend-cli",
-  "version": "2.0.0-beta.1",
+  "version": "2.0.0-beta.2",
   "description": "Toolkit for rapid development of React and Angular 2 apps",
   "main": "index.js",
   "bin": {
@@ -12,12 +12,12 @@
   "scripts": {
     "postinstall": "node ./init.js"
   },
-  "repository": "github:kiurchv/frontend-cli",
+  "repository": "github:sunshine-code/frontend-cli",
   "author": "Myroslav Kiurchev",
   "bugs": {
-    "url": "https://github.com/kiurchv/frontend-cli/issues"
+    "url": "https://github.com/sunshine-code/frontend-cli/issues"
   },
-  "homepage": "https://github.com/kiurchv/frontend-cli",
+  "homepage": "https://github.com/sunshine-code/frontend-cli",
   "dependencies": {
     "babel-loader": "^6.2.4",
     "babel-plugin-transform-async-to-generator": "^6.8.0",
