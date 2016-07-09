@@ -1,31 +1,4 @@
 {
-  "extends": "stylelint-config-standard",
-  "rules": {
-    "block-no-single-line": true,
-    "font-family-name-quotes": "always-where-recommended",
-    "function-url-quotes": "always",
-    "string-quotes": "double",
-    "at-rule-no-vendor-prefix": true,
-    "media-feature-name-no-vendor-prefix": true,
-    "property-no-vendor-prefix": true,
-    "selector-no-vendor-prefix": true,
-    "value-no-vendor-prefix": true,
-    "max-nesting-depth": 2,
-    "selector-max-compound-selectors": 3,
-    "selector-max-specificity": "1,2,0",
-    "color-named": "never",
-    "declaration-no-important": true,
-    "selector-no-qualifying-type": true,
-    "custom-media-pattern": "^[a-z]+(-[a-z]+)*$",
-    "custom-property-pattern": "^[a-z]+(-[a-z]+)*$",
-    "selector-class-pattern": "^([a-z]+(-[a-z]+)*(__[a-z]+)?)?(--?[a-z]+)*$",
-    "selector-id-pattern": "^[a-z]+(-[a-z]+)*$",
-    "font-weight-notation": "numeric",
-    "custom-property-no-outside-root": true,
-    "selector-root-no-composition": true,
-    "function-url-data-uris": "never",
-    "max-line-length": 80,
-    "no-browser-hacks": true,
-    "no-unsupported-browser-features": true
-  }
+  "extends": "stylelint-config-sc",
+  "rules": {}
 }
