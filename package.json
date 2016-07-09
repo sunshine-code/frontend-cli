@@ -46,7 +46,7 @@
     "readline-sync": "^1.4.4",
     "style-loader": "^0.13.1",
     "stylelint": "^6.7.0",
-    "stylelint-config-standard": "^9.0.0",
+    "stylelint-config-sc": "github:sunshine-code/stylelint-config-sc",
     "webpack": "^2.1.0-beta.15",
     "webpack-dev-server": "^2.1.0-beta.0",
     "webpack-merge": "^0.14.0",
