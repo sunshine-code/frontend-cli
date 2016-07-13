@@ -1,0 +1,3 @@
+.root {
+  /* These styles will be applied to the root of your component */
+}

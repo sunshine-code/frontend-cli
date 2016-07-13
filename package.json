@@ -10,7 +10,8 @@
     "lib": "./lib"
   },
   "scripts": {
-    "postinstall": "node ./init.js"
+    "postinstall": "node ./init.js",
+    "lint": "eslint ."
   },
   "repository": "github:sunshine-code/frontend-cli",
   "author": "Myroslav Kiurchev",
@@ -24,11 +25,15 @@
     "babel-plugin-transform-es2015-modules-commonjs": "^6.10.3",
     "babel-plugin-transform-system-import-commonjs": "^1.0.2",
     "babel-preset-es2015-webpack": "^6.4.1",
+    "babel-preset-stage-1": "^6.5.0",
     "babel-register": "^6.9.0",
     "chalk": "^1.1.3",
     "clean-webpack-plugin": "^0.1.9",
     "css-loader": "^0.23.1",
     "diff": "^2.2.3",
+    "eslint": "^3.0.1",
+    "eslint-config-sc": "file:///Users/kiurchv/Projects/eslint-config-sc",
+    "eslint-loader": "^1.4.1",
     "extract-text-webpack-plugin": "github:kiurchv/extract-text-webpack-plugin#196-webpack2-query-object",
     "favicons-webpack-plugin": "github:jantimon/favicons-webpack-plugin#03315ba",
     "file-loader": "^0.8.5",
@@ -45,7 +50,7 @@
     "progress-bar-webpack-plugin": "^1.8.0",
     "readline-sync": "^1.4.4",
     "style-loader": "^0.13.1",
-    "stylelint": "^6.7.0",
+    "stylelint": "^6.9.0",
     "stylelint-config-sc": "github:sunshine-code/stylelint-config-sc",
     "webpack": "^2.1.0-beta.15",
     "webpack-dev-server": "^2.1.0-beta.0",
