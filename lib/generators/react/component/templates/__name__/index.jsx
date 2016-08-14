@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 <% if (styles) { %>
-import style from "./style.<%= stylesExt %>";
+import styles from "./styles";
 <% } %>
 export default class <%= name %> extends Component {
   render() {
