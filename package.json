@@ -35,6 +35,7 @@
     "imagemin-webpack-plugin": "^1.0.8",
     "inline-manifest-webpack-plugin": "^3.0.1",
     "interpret": "^1.0.1",
+    "json-loader": "^0.5.4",
     "lodash": "^4.13.1",
     "mkdirp": "^0.5.1",
     "offline-plugin": "^3.4.2",
