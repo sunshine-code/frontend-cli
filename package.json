@@ -1,6 +1,6 @@
 {
   "name": "frontend-cli",
-  "version": "2.0.0-beta.2",
+  "version": "2.0.0-beta.3",
   "description": "Toolkit for rapid development of React and Angular 2 apps",
   "main": "index.js",
   "bin": {
@@ -29,7 +29,7 @@
     "css-loader": "^0.23.1",
     "diff": "^2.2.3",
     "extract-text-webpack-plugin": "2.0.0-beta.3",
-    "favicons-webpack-plugin": "git://github.com/jantimon/favicons-webpack-plugin.git#03315ba6d9627d259d4220f345221e98f34fd5b3",
+    "favicons-webpack-plugin": "^0.0.7",
     "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.22.0",
     "imagemin-webpack-plugin": "^1.0.8",
@@ -47,8 +47,8 @@
     "style-loader": "^0.13.1",
     "stylelint": "^6.7.0",
     "stylelint-config-standard": "^9.0.0",
-    "webpack": "^2.1.0-beta.20",
-    "webpack-dev-server": "^2.1.0-beta.0",
+    "webpack": "=2.1.0-beta.20",
+    "webpack-dev-server": "=2.1.0-beta.0",
     "webpack-merge": "^0.14.1",
     "webpack-visualizer-plugin": "^0.1.5",
     "yargs": "^4.8.1"
